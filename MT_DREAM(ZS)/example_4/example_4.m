@@ -38,7 +38,7 @@ bounds=[10,  0.25,  2.5,   0.05,    2.5,   -500;
        200, 0.75,  7.5,   0.08,    7.5,   -50]; 
 Par_info.min = bounds(1,:);                % 1xd-vector of min parameter values    
 Par_info.max=bounds(2,:);                  % 1xd-vector of max parameter values    
-Par_info.boundhandling='fold';            % reject of boudn proposals
+Par_info.boundhandling='reflect';            % reject of boudn proposals
 
 %% Define name of function (.m file) for posterior exploration
 Func_name = 'target_new';

@@ -52,7 +52,6 @@ opts.Moves.Sequence = {'AWM','XOVER','DEMH'}; %
 
 % 4) AWM (adaptive random-walk MH)
 opts.Moves.AWM.Cov       = 1e-3 * eye(d);   % initial; re-estimated each stage as (2.38^2/d)*SigmaW + jitter*I
-opts.Moves.AWM.FoldType  = 'fold';       % 'fold' | 'reflect'
 opts.Moves.AWM.Jitter    = 1e-6;            % diagonal jitter to keep covariance PD
 
 % 5) Crossover (single-point, tempered two-body MH)
@@ -61,7 +60,7 @@ opts.Moves.Crossover.pc  = 0.70;            % per-pair crossover probability
 % 6) DE–MH (differential evolution MH)
 opts.Moves.DEMH.Gamma    = 2.38 / sqrt(2*d);
 opts.Moves.DEMH.NoiseSD  = 5e-5;
-opts.Moves.DEMH.FoldType = 'fold';       % 'fold' | 'reflect'
+
 
 % 7) Parallel
 opts.Parallel.Enabled     = true;    % set true to use parfor

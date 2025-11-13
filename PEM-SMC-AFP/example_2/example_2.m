@@ -53,7 +53,6 @@ opts.Moves.Sequence = {'ARM','XOVER','DEMH','DEMH'};
 
 % 4) ARM (Adaptive Random-Walk MH)
 opts.Moves.ARM.Cov       = 1e-3 * eye(d);   % initial; re-estimated per stage as (2.38^2/d)*SigmaW + jitter*I
-opts.Moves.ARM.FoldType  = 'reflect';       % 'fold' | 'reflect'
 opts.Moves.ARM.Jitter    = 1e-6;            % diagonal jitter to keep covariance PD
 
 % 5) Crossover (single-point, tempered two-body MH)
@@ -62,7 +61,7 @@ opts.Moves.Crossover.pc  = 0.70;            % per-pair crossover probability
 % 6) DE–MH (Differential Evolution MH)
 opts.Moves.DEMH.Gamma    = 2.38 / sqrt(2*d);
 opts.Moves.DEMH.NoiseSD  = 1e-4;
-opts.Moves.DEMH.FoldType = 'reflect';       % 'fold' | 'reflect'
+
 
 % 7) Parallel (enable if you have PCT; otherwise keep false)
 opts.Parallel.Enabled     = false;          % set true to use parfor

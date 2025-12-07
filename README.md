@@ -1,10 +1,9 @@
-# PATPEM-SMC Algorithm – MATLAB Code
+# PATPEMS Algorithm – MATLAB Code
 
-This repository bundles the MATLAB code used in the PATPEM-SMC study:
+This repository bundles the MATLAB code used in the PATPEMS study:
 
-- **PATPEM-SMC/** – tempered Sequential Monte Carlo algorithm with adaptive tempering,
-  flexible move scheduling, and parallelism.  
-  Detailed installation and usage instructions are given in `PATPEM-SMC/README.md`.
+- **PATPEMS/** – Parallel Adaptive Transition Particle Evolution Metropolis Sequential Monte Carlo (PATPEMS)
+  Detailed installation and usage instructions are given in `PATPEMS/README.md`.
 
 - **MT_DREAM(ZS)/** – MT-DREAM(ZS) sampler used as a baseline in the CoLM case studies.  
   See `MT_DREAM(ZS)/README.md` for details.
